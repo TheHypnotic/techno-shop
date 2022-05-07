@@ -148,7 +148,10 @@ const Footer = () => {
       </div>
 
       <div className="git-hub container">
-        <a href="#">
+        <a
+          href="https://github.com/TheHypnotic/Techno-shop.git"
+          target="_blank"
+        >
           <span>گیت هاب</span> <FaGithub />
         </a>
       </div>
