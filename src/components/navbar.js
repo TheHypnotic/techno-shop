@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMagnifyingGlass,
@@ -12,23 +12,149 @@ import {
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { faSquare } from "@fortawesome/free-regular-svg-icons";
+import { products } from "../static/products";
 
 const Navbar = () => {
+  const [mobileBrands, setMobileBrands] = useState([]);
+  const [laptopBrands, seLaptopBrands] = useState([]);
+  const [tabletBrands, setTabletBrands] = useState([]);
+
+  useEffect(() => {
+    const brandList = [];
+    products.map((item) => {
+      const { brandFa, category } = item;
+
+      if (category === "phone") {
+        if (!brandList.includes(brandFa)) {
+          return brandList.push(brandFa);
+        }
+      }
+    });
+    setMobileBrands(brandList);
+  }, []);
+  useEffect(() => {
+    const brandList = [];
+    products.map((item) => {
+      const { brandFa, category } = item;
+
+      if (category === "laptop") {
+        if (!brandList.includes(brandFa)) {
+          return brandList.push(brandFa);
+        }
+      }
+    });
+    seLaptopBrands(brandList);
+  }, []);
+  useEffect(() => {
+    const brandList = [];
+    products.map((item) => {
+      const { brandFa, category } = item;
+
+      if (category === "tablet") {
+        if (!brandList.includes(brandFa)) {
+          return brandList.push(brandFa);
+        }
+      }
+    });
+    setTabletBrands(brandList);
+  }, []);
   useEffect(() => {
     document.querySelector(".menu-bars").addEventListener("click", () => {
       const menu = document.querySelector(".navbar-menu");
       menu.style.display = "block";
+      menu.classList.add("d-block");
     });
   }, []);
   useEffect(() => {
     document.querySelector(".menu-cross").addEventListener("click", () => {
       const menu = document.querySelector(".navbar-menu");
       menu.style.display = "none";
+      menu.classList.remove("d-block");
     });
   }, []);
+  useEffect(() => {
+    const isActive = document.querySelector(".signin-heading");
+    if (isActive.classList.contains("active")) {
+      document.querySelector("#signin-form").classList.add("d-block");
+    }
+    document
+      .querySelector(".account-sign-btn")
+      .addEventListener("click", () => {
+        document.querySelector("#signin").classList.add("d-block");
+      });
+    document.querySelector(".cross").addEventListener("click", () => {
+      document.querySelector("#signin").classList.remove("d-block");
+    });
 
+    document.querySelector(".signup-heading").addEventListener("click", () => {
+      document.querySelector("#signup-form").classList.add("d-block");
+      document.querySelector(".signup-heading").classList.add("active");
+      document.querySelector("#signin-form").classList.remove("d-block");
+      document.querySelector(".signin-heading").classList.remove("active");
+    });
+    document.querySelector(".signin-heading").addEventListener("click", () => {
+      document.querySelector("#signin-form").classList.add("d-block");
+      document.querySelector(".signin-heading").classList.add("active");
+      document.querySelector("#signup-form").classList.remove("d-block");
+      document.querySelector(".signup-heading").classList.remove("active");
+    });
+  }, []);
   return (
     <>
+      <section id="signin" className="d-none">
+        <div id="signin-container">
+          <div className=" cross ">
+            <FontAwesomeIcon icon={faXmark} />
+          </div>
+          <div className="signin-tab flex">
+            <h3 className="signin-heading active">ورود</h3>
+            <h3 className="signup-heading">ثبت نام</h3>
+          </div>
+          <form id="signin-form" className=" d-none">
+            <div className="input-container flex">
+              <label htmlFor="">شماره همراه:</label>
+              <input type="number" name="Phone" required />
+            </div>
+            <div className="input-container flex">
+              <label htmlFor="">رمز:</label>
+              <input type="password" name="Password" required />
+            </div>
+            <div>
+              <input type="checkbox" />
+              <label htmlFor=""> مرا به خاطر بسپار</label>
+            </div>
+            <div className="form-btn">
+              <button className="btn">ورود</button>
+            </div>
+          </form>
+          <form id="signup-form" className=" d-none">
+            <div className="input-container flex">
+              <label htmlFor="">نام:</label>
+              <input type="text" name="Phone" required />
+            </div>
+            <div className="input-container flex">
+              <label htmlFor="">شماره همراه:</label>
+              <input type="number" name="Phone" required />
+            </div>
+            <div className="input-container flex">
+              <label htmlFor="">رمز:</label>
+              <input type="password" name="Password" required />
+            </div>
+            <div className="input-container flex">
+              <label htmlFor="">تکرار رمز:</label>
+              <input type="password" name="Password" required />
+            </div>
+            <div>
+              <input type="checkbox" />
+              <label htmlFor="">قوانین را بطور کامل قبول دارم</label>
+            </div>
+            <div className="form-btn">
+              <button className="btn">ثبت نام</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
       <section id="navbar">
         <div className="container">
           <div className="navbar-top flex justify-between align-center">
@@ -71,13 +197,13 @@ const Navbar = () => {
                 موبایل
               </a>
               <div className="dropdown-content">
-                <a href="#"> سامسونگ | Samsung</a>
-                <a href="#">اپل | Apple</a>
-                <a href="#">شیاومی | Xiaomi</a>
-                <a href="#">سونی | Sony</a>
-                <a href="#">هواوی| Huawei</a>
-                <a href="#">نوکیا | Nokia</a>
-                <a href="#"> آنر |Honor</a>
+                {mobileBrands.map((i, index) => {
+                  return (
+                    <a key={index} href="#">
+                      {i}
+                    </a>
+                  );
+                })}
               </div>
             </li>
             <li className="dropdown nav-item">
@@ -86,10 +212,13 @@ const Navbar = () => {
                 تبلت
               </a>
               <div className="dropdown-content">
-                <a href="#"> سامسونگ | Samsung</a>
-                <a href="#">اپل | Apple</a>
-                <a href="#">لنوو | Lenovo</a>
-                <a href="#">نوکیا | Nokia</a>
+                {tabletBrands.map((i, index) => {
+                  return (
+                    <a key={index} href="#">
+                      {i}
+                    </a>
+                  );
+                })}
               </div>
             </li>
             <li className="dropdown nav-item">
@@ -98,9 +227,13 @@ const Navbar = () => {
                 لپ تاپ
               </a>
               <div className="dropdown-content">
-                <a href="#">samsung| سامسونگ</a>
-                <a href="#">samsung| سامسونگ</a>
-                <a href="#">samsung| سامسونگ</a>
+                {laptopBrands.map((i, index) => {
+                  return (
+                    <a key={index} href="#">
+                      {i}
+                    </a>
+                  );
+                })}
               </div>
             </li>
             <li className="dropdown nav-item">
@@ -108,11 +241,6 @@ const Navbar = () => {
                 <FontAwesomeIcon icon={faHeadphonesAlt} />
                 لوازم جانبی
               </a>
-              <div className="dropdown-content">
-                <a href="#"> دل | Dell</a>
-                <a href="#">اپل | Apple</a>
-                <a href="#">لنوو | Lenovo</a>
-              </div>
             </li>
             <li className="nav-item">
               <a href="#">

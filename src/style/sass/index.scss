@@ -35,6 +35,9 @@ ul {
 .d-none {
   display: none;
 }
+.d-block {
+  display: block;
+}
 .color-light {
   color: $lighter-bg;
 }
@@ -94,6 +97,7 @@ li {
     text-align: left;
     font-weight: bold;
   }
+
   .discounted {
     text-decoration: line-through;
     color: $light-bg;
@@ -107,13 +111,13 @@ li {
       font-size: 1.2rem;
     }
   }
-
   .btn {
     position: absolute;
     left: 0;
     bottom: 0;
   }
 }
+
 // nav bar
 .brand-name {
   color: $brand-main-color;
@@ -534,7 +538,171 @@ li {
     }
   }
 }
+#signin {
+  height: 100vh;
+  width: 98vw;
+  position: absolute;
+  background-color: #6868682a;
+  z-index: 300;
 
+  #signin-container {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10%;
+    max-width: 330px;
+    display: flex;
+    padding: 10px 20px;
+    flex-direction: column;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px #9b9b9b;
+    .signin-tab {
+      h3 {
+        padding: 5px 5px;
+        margin: 10px 5px;
+        color: $light-color;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .active {
+        color: $brand-secondary-color;
+        display: block;
+      }
+    }
+    .input-container {
+      transition: all 1s ease-in-out;
+      flex-direction: column;
+      input {
+        margin: 10px 0;
+        height: 1.5rem;
+        border: 0.5px solid $light-color;
+        padding: 2px 5px;
+      }
+      input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      input[type="number"] {
+        -moz-appearance: textfield; /* Firefox */
+      }
+      label {
+        align-self: flex-start;
+      }
+    }
+    .form-btn {
+      margin-top: 10px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    .btn {
+      margin: 10px auto;
+      background-color: $brand-secondary-color;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    .cross {
+      color: $light-color;
+      position: absolute;
+      vertical-align: middle;
+      left: 46px;
+      top: 25px;
+
+      &:hover {
+        cursor: pointer;
+      }
+      svg {
+        font-size: 2rem;
+        color: $brand-secondary-color;
+      }
+    }
+  }
+}
+// single product
+#single-product {
+  margin: 30px 0;
+  .flex {
+    justify-content: space-between;
+  }
+  .single-product-detail {
+    padding: 0 30px;
+    max-width: 475px;
+    margin-left: auto;
+  }
+  .discounted {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #686868;
+    &-price {
+      text-align: center;
+      color: $red;
+      font-size: 1.8rem;
+    }
+  }
+  p {
+    margin-top: 30px;
+  }
+  img {
+    height: 350px;
+    border: 0.5px solid $light-bg;
+    border-radius: 5px;
+    padding: 10px 0;
+  }
+  .add-cart-container {
+    margin: 0 10px;
+  }
+  .gb-btn-container {
+    position: relative;
+    .gb-btn {
+      position: absolute;
+      left: 0;
+      background-color: $brand-main-color;
+    }
+  }
+}
+#signin.d-block #signin-container {
+  animation: signin-smooth 0.6s alternate;
+}
+@keyframes signin-smooth {
+  0% {
+    transform: scale(0.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.navbar-menu.d-block .container {
+  animation: sidenav-smooth 0.6s alternate;
+}
+
+@keyframes sidenav-smooth {
+  0% {
+    top: 0;
+    right: -100px;
+  }
+  100% {
+    right: 0;
+  }
+}
+.carousel-item.active-slide {
+  animation: slide-smooth 0.5s alternate;
+}
+@keyframes slide-smooth {
+  0% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+// responsive
 // large screens
 @media (max-width: 1320px) {
   .carousel-text {
@@ -669,6 +837,15 @@ li {
   #special-offer .flex {
     flex-direction: column;
   }
+  #single-product {
+    .flex {
+      flex-direction: column;
+    }
+    .single-product-detail {
+      margin: auto;
+      text-align: center;
+    }
+  }
 }
 @media (max-width: 800px) {
   .container {
@@ -687,13 +864,26 @@ li {
     .search-holder {
       .line {
         right: 8.5%;
+        top: 7px;
+      }
+      svg {
+        top: 8px;
       }
       .flex {
         flex-direction: column;
       }
     }
     .cart-acc-container {
-      display: none;
+      margin-top: 10px;
+      margin-left: 20px;
+      .account-sign-btn {
+        margin: 0;
+      }
+      svg {
+        padding: 0;
+        margin: 0;
+        margin-top: 5px;
+      }
     }
   }
   .slick-prev {
@@ -724,6 +914,15 @@ li {
   #laptop-showcase .card {
     left: 15%;
   }
+  #signin #signin-container {
+    max-width: 250px;
+  }
+  #single-product {
+    img {
+      margin-top: 50px;
+      height: 300px;
+    }
+  }
 }
 @media (max-width: 350px) {
   .container {
@@ -737,5 +936,14 @@ li {
   .slick-prev {
     left: 30px !important;
     z-index: 10;
+  }
+  #single-product {
+    .gb-btn {
+      left: 38% !important;
+    }
+    img {
+      margin-top: 50px;
+      height: 200px;
+    }
   }
 }

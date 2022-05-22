@@ -1,8 +1,9 @@
-import React, { useState, useEffect, Component } from "react";
+import React, { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { products, consoleShowcase } from "../static/products";
 import { showcaseList } from "../static/showcase-data";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 const Homepage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [countDown, setCountDown] = useState(new Date());
@@ -127,7 +128,10 @@ const Homepage = () => {
                   <p className={`${item.price2 ? "discounted" : ""}`}>
                     {item.price}
                   </p>
-                  <button className="btn"> بیشتر &gt;</button>
+
+                  <Link to={`/products/${item.id}`}>
+                    <button className="btn"> بیشتر &gt;</button>
+                  </Link>
                 </div>
               </div>
             );
@@ -165,19 +169,23 @@ const Homepage = () => {
           <h2 className="container"> موبایل</h2>
           <Slider {...settings} className="container">
             {products.slice(0, 7).map((item) => {
-              return (
-                <div key={item.id} className="card">
-                  <img src={item.img} alt="" />
-                  <h2>{item.name}</h2>
-                  <p className={`${item.price2 ? "discounted-price" : ""}`}>
-                    {item.price2}
-                  </p>
-                  <p className={`${item.price2 ? "discounted" : ""}`}>
-                    {item.price}
-                  </p>
-                  <button className="btn">&lt; بیشتر </button>
-                </div>
-              );
+              if (item.category === "phone") {
+                return (
+                  <div key={item.id} className="card">
+                    <img src={item.img} alt="" />
+                    <h2>{item.name}</h2>
+                    <p className={`${item.price2 ? "discounted-price" : ""}`}>
+                      {item.price2}
+                    </p>
+                    <p className={`${item.price2 ? "discounted" : ""}`}>
+                      {item.price}
+                    </p>
+                    <Link to={`/products/${item.id}`}>
+                      <button className="btn"> بیشتر &gt;</button>
+                    </Link>
+                  </div>
+                );
+              }
             })}
           </Slider>
         </div>
@@ -207,20 +215,24 @@ const Homepage = () => {
         <div>
           <h2 className=" container"> لپ تاپ</h2>
           <Slider {...settings} className="container">
-            {products.slice(0, 7).map((item) => {
-              return (
-                <div key={item.id} className="card">
-                  <img src={item.img} alt="" />
-                  <h2>{item.name}</h2>
-                  <p className={`${item.price2 ? "discounted-price" : ""}`}>
-                    {item.price2}
-                  </p>
-                  <p className={`${item.price2 ? "discounted" : ""}`}>
-                    {item.price}
-                  </p>
-                  <button className="btn">&lt; بیشتر </button>
-                </div>
-              );
+            {products.map((item) => {
+              if (item.category === "laptop") {
+                return (
+                  <div key={item.id} className="card">
+                    <img src={item.img} alt="" />
+                    <h2>{item.name}</h2>
+                    <p className={`${item.price2 ? "discounted-price" : ""}`}>
+                      {item.price2}
+                    </p>
+                    <p className={`${item.price2 ? "discounted" : ""}`}>
+                      {item.price}
+                    </p>
+                    <Link to={`/products/${item.id}`}>
+                      <button className="btn"> بیشتر &gt;</button>
+                    </Link>
+                  </div>
+                );
+              }
             })}
           </Slider>
         </div>
