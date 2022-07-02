@@ -1,4 +1,4 @@
-import iphoneimg from "./iphone1.png";
+import iphoneimg from "./iphone.png";
 import macimg from "./mac.png";
 import ps5img from "./ps5.jpg";
 export const showcaseList = [

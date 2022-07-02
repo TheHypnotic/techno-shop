@@ -76,7 +76,6 @@ li {
   list-style: none;
 }
 .card {
-  box-shadow: 1px 3px 5px 6px #686868;
   background: #fff;
   margin: 5px 10px;
   padding: 5px 10px;
@@ -86,7 +85,7 @@ li {
   height: 360px;
   border-radius: 5px;
   h2 {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
   img {
     height: 170px;
@@ -96,6 +95,10 @@ li {
     margin-left: 20px;
     text-align: left;
     font-weight: bold;
+    font-size: 0.9rem;
+  }
+  &:hover {
+    box-shadow: 0px 0px 6px -2px $light-bg;
   }
 
   .discounted {
@@ -111,10 +114,10 @@ li {
       font-size: 1.2rem;
     }
   }
-  .btn {
+  .price {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: 20px;
   }
 }
 
@@ -339,7 +342,7 @@ li {
     margin-bottom: 30px;
   }
   .card {
-    box-shadow: 3px 2px 5px 6px $light-bg;
+    box-shadow: 0px 0px 6px -2px $light-bg;
   }
 }
 
@@ -541,7 +544,7 @@ li {
 #signin {
   height: 100vh;
   width: 98vw;
-  position: absolute;
+  position: fixed;
   background-color: #6868682a;
   z-index: 300;
 
@@ -630,19 +633,36 @@ li {
   .flex {
     justify-content: space-between;
   }
-  .single-product-detail {
+  .single-product-container {
+    margin: 20px 0px;
+  }
+  .title {
     padding: 0 30px;
     max-width: 475px;
     margin-left: auto;
+    align-self: flex-start;
+  }
+  .price {
+    color: #686868;
+    text-align: center;
   }
   .discounted {
     text-align: center;
-    font-size: 1.4rem;
+    text-decoration: line-through;
     color: #686868;
     &-price {
       text-align: center;
       color: $red;
-      font-size: 1.8rem;
+      font-size: 1.2rem;
+    }
+  }
+  .detail {
+    h3 {
+      border-bottom: 3px solid $brand-secondary-color;
+      display: inline-block;
+    }
+    p {
+      line-height: 3rem;
     }
   }
   p {
@@ -650,13 +670,15 @@ li {
   }
   img {
     height: 350px;
-    border: 0.5px solid $light-bg;
-    border-radius: 5px;
     padding: 10px 0;
   }
   .add-cart-container {
     margin: 0 10px;
+    align-self: flex-end;
+    min-width: 170px;
+    text-align: center;
   }
+
   .gb-btn-container {
     position: relative;
     .gb-btn {

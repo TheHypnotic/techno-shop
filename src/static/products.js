@@ -1,3 +1,6 @@
+// import ps5_sc from "./ps5-sc.jpg";
+import xbox_sc from "./xbox-sc.png";
+
 export const products = [
   {
     id: 1,
@@ -10,7 +13,9 @@ export const products = [
     sales: 15987,
     price: "۵,۳۴۹,۰۰۰",
     price2: "۴,۳۸۹,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/25992f560565bc308036ac425b304fc5fc4f1114_1644662985.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/25992f560565bc308036ac425b304fc5fc4f1114_1644662985.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/25992f560565bc308036ac425b304fc5fc4f1114_1644662985.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 2,
@@ -22,7 +27,9 @@ export const products = [
     brandFa: "شیائومی",
     sales: 20987,
     price: "۸,۳۱۰,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/caa4e7d9543637cf8921b67f26803827c864e269_1618918880.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/caa4e7d9543637cf8921b67f26803827c864e269_1618918880.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/caa4e7d9543637cf8921b67f26803827c864e269_1618918880.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 3,
@@ -34,7 +41,9 @@ export const products = [
     brandFa: "شیائومی",
     sales: 8987,
     price: "۸,۴۹۰,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/1cd452a648ec0c1c723139c099e0367c9a190f1f_1621325469.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/1cd452a648ec0c1c723139c099e0367c9a190f1f_1621325469.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/1cd452a648ec0c1c723139c099e0367c9a190f1f_1621325469.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 4,
@@ -46,7 +55,9 @@ export const products = [
     brandFa: "شیائومی",
     sales: 2043,
     price: "۱۲,۸۷۰,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/e780b3dd9f0f8b865090de431073f87fe705ecbb_1646565396.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/e780b3dd9f0f8b865090de431073f87fe705ecbb_1646565396.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/e780b3dd9f0f8b865090de431073f87fe705ecbb_1646565396.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 5,
@@ -58,7 +69,9 @@ export const products = [
     brandFa: "شیائومی",
     sales: 546,
     price: "۱۰,۶۱۹,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/f1e7efc2e5bc5d58103f7a7d4931168b887003f8_1637386322.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/f1e7efc2e5bc5d58103f7a7d4931168b887003f8_1637386322.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/f1e7efc2e5bc5d58103f7a7d4931168b887003f8_1637386322.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 6,
@@ -70,7 +83,9 @@ export const products = [
     brandFa: "اپل",
     sales: 16843,
     price: "۱۶,۸۸۹,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/61d845a9109268ddc636a57286760e637cb5da0c_1649225259.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/61d845a9109268ddc636a57286760e637cb5da0c_1649225259.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/61d845a9109268ddc636a57286760e637cb5da0c_1649225259.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 7,
@@ -82,7 +97,9 @@ export const products = [
     brandFa: "سامسونگ",
     sales: 12683,
     price: "۴۵,۳۸۹,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/195bd99289c288cbb927fe9b9d659275eefeae71_1631704698.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/195bd99289c288cbb927fe9b9d659275eefeae71_1631704698.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/195bd99289c288cbb927fe9b9d659275eefeae71_1631704698.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 8,
@@ -94,7 +111,9 @@ export const products = [
     brandFa: "سامسونگ",
     sales: 14283,
     price: "۱۴,۲۷۹,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/2e16bad7f6ea176ae6502406d7342afe9982fbf7_1615294432.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/2e16bad7f6ea176ae6502406d7342afe9982fbf7_1615294432.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/2e16bad7f6ea176ae6502406d7342afe9982fbf7_1615294432.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 9,
@@ -106,7 +125,9 @@ export const products = [
     brandFa: "سامسونگ",
     sales: 1463,
     price: "۴۵,۳۸۹,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/6207b3bf015d7fff97e9e04868497ac6a30474a3_1632809084.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/6207b3bf015d7fff97e9e04868497ac6a30474a3_1632809084.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/6207b3bf015d7fff97e9e04868497ac6a30474a3_1632809084.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 10,
@@ -119,7 +140,9 @@ export const products = [
     sales: 1843,
     price: "۶,۶۶۹,۰۰۰",
     price2: "۶,۳۹۹,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/11bab97599bdd46407285cb7bddafeb0faef8940_1642404560.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/11bab97599bdd46407285cb7bddafeb0faef8940_1642404560.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/11bab97599bdd46407285cb7bddafeb0faef8940_1642404560.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 11,
@@ -132,7 +155,9 @@ export const products = [
     sales: 1543,
     price: "۳,۴۴۵,۰۰۰",
     price2: "۳,۲۹۹,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/27260d0f647982877f21b7b2d18cba11ab107f3b_1602332715.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/27260d0f647982877f21b7b2d18cba11ab107f3b_1602332715.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/27260d0f647982877f21b7b2d18cba11ab107f3b_1602332715.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 12,
@@ -144,7 +169,9 @@ export const products = [
     brandFa: "هوآوی",
     sales: 1783,
     price: "۱,۶۴۰,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/3da93278ac3c242d5dbe90026b165073d45e70bf_1626239866.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/3da93278ac3c242d5dbe90026b165073d45e70bf_1626239866.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/3da93278ac3c242d5dbe90026b165073d45e70bf_1626239866.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
 
   {
@@ -157,7 +184,9 @@ export const products = [
     brandFa: "هوآوی",
     sales: 1783,
     price: "۱,۶۴۰,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/3da93278ac3c242d5dbe90026b165073d45e70bf_1626239866.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/3da93278ac3c242d5dbe90026b165073d45e70bf_1626239866.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/3da93278ac3c242d5dbe90026b165073d45e70bf_1626239866.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 13,
@@ -169,7 +198,9 @@ export const products = [
     brandFa: "لنوو",
     sales: 1083,
     price: "۲۵,۳۸۰,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/c2b125d40d514f2471395fc1a564a94135725c71_1646467219.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/c2b125d40d514f2471395fc1a564a94135725c71_1646467219.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/c2b125d40d514f2471395fc1a564a94135725c71_1646467219.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 14,
@@ -181,7 +212,9 @@ export const products = [
     brandFa: "لنوو",
     sales: 1778,
     price: "۱۲,۱۰۰,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/1ac7ff47d8d40352d4a853532754de4dbb59f267_1645451449.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/1ac7ff47d8d40352d4a853532754de4dbb59f267_1645451449.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/1ac7ff47d8d40352d4a853532754de4dbb59f267_1645451449.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 15,
@@ -194,7 +227,9 @@ export const products = [
     sales: 1778,
     price: "۱۹,۲۰۰,۰۰۰",
     price2: "۱۸,۷۹۰,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/99cfab498249f94e35da212df30e3e959fd5c3a9_1622445433.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/99cfab498249f94e35da212df30e3e959fd5c3a9_1622445433.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/99cfab498249f94e35da212df30e3e959fd5c3a9_1622445433.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 16,
@@ -206,7 +241,9 @@ export const products = [
     brandFa: "اپل",
     sales: 1778,
     price: "۳۸,۵۹۰,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/fb5ac01262f2b1988fa8eeb29f966e81583b3969_1605620114.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/fb5ac01262f2b1988fa8eeb29f966e81583b3969_1605620114.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/fb5ac01262f2b1988fa8eeb29f966e81583b3969_1605620114.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 17,
@@ -218,7 +255,9 @@ export const products = [
     brandFa: "اپل",
     sales: 1778,
     price: "۲۹,۹۹۰,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/79f4b1e3c31fb22fa193ea1393e2cb8e8a5863cc_1605085571.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/79f4b1e3c31fb22fa193ea1393e2cb8e8a5863cc_1605085571.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/79f4b1e3c31fb22fa193ea1393e2cb8e8a5863cc_1605085571.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 18,
@@ -229,7 +268,9 @@ export const products = [
     brand: "dell",
     sales: 1778,
     price: "۳۱,۴۰۰,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/55de996e8456cbe8ea4779746402ff2d6f69a249_1639919404.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/55de996e8456cbe8ea4779746402ff2d6f69a249_1639919404.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/55de996e8456cbe8ea4779746402ff2d6f69a249_1639919404.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 19,
@@ -241,7 +282,9 @@ export const products = [
     brandFa: "دل",
     sales: 1778,
     price: "۳۱,۴۰۰,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/55de996e8456cbe8ea4779746402ff2d6f69a249_1639919404.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/55de996e8456cbe8ea4779746402ff2d6f69a249_1639919404.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/55de996e8456cbe8ea4779746402ff2d6f69a249_1639919404.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 20,
@@ -254,7 +297,9 @@ export const products = [
     sales: 1778,
     price: "۱۶,۸۰۰,۰۰۰",
     price2: "۱۶,۴۰۰,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/b7749d3d36871157d29ddab6a027f8e4dfc01e0d_1644748867.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/b7749d3d36871157d29ddab6a027f8e4dfc01e0d_1644748867.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/b7749d3d36871157d29ddab6a027f8e4dfc01e0d_1644748867.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 21,
@@ -267,7 +312,9 @@ export const products = [
     sales: 1778,
     price: "۲۳,۸۰۰,۰۰۰",
     price2: "۲۳,۳۰۰,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/e09cbc6e84ae4b3817e5e546e249367c2a40a777_1638879218.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/e09cbc6e84ae4b3817e5e546e249367c2a40a777_1638879218.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/e09cbc6e84ae4b3817e5e546e249367c2a40a777_1638879218.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 22,
@@ -280,7 +327,9 @@ export const products = [
     sales: 1778,
     price: "۲۳,۸۰۰,۰۰۰",
     price2: "۲۳,۳۰۰,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/76d85a899c5e9e90fe36376ddabe70d45b879fcf_1606054015.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/76d85a899c5e9e90fe36376ddabe70d45b879fcf_1606054015.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/76d85a899c5e9e90fe36376ddabe70d45b879fcf_1606054015.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 23,
@@ -293,7 +342,9 @@ export const products = [
     sales: 1778,
     price: "۲۳,۸۰۰,۰۰۰",
     price2: "۲۳,۳۰۰,۰۰۰",
-    img: "https://dkstatics-public.digikala.com/digikala-products/b499efa2840b63f944f314bfca06558e58dd0b68_1638175378.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    img: "https://dkstatics-public.digikala.com/digikala-products/b499efa2840b63f944f314bfca06558e58dd0b68_1638175378.jpg?x-oss-process=image/resize,m_lfit,h_300,w_300/quality,q_80",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/b499efa2840b63f944f314bfca06558e58dd0b68_1638175378.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
   {
     id: 24,
@@ -307,6 +358,8 @@ export const products = [
     price: "۲۳,۸۰۰,۰۰۰",
     price2: "۲۳,۳۰۰,۰۰۰",
     img: "https://dkstatics-public.digikala.com/digikala-products/7b3882bdc0ec0f967ce6c668a3cd2f88910f81c6_1604820063.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
+    BigImg:
+      "https://dkstatics-public.digikala.com/digikala-products/7b3882bdc0ec0f967ce6c668a3cd2f88910f81c6_1604820063.jpg?x-oss-process=image/resize,m_lfit,h_800,w_800/quality,q_90",
   },
 ];
 
@@ -316,6 +369,7 @@ export const consoleShowcase = [
     title: "پلی استیشن ۵",
     paragraph: "لذت بازی کردن با بالاترین کیفیت",
     class: "ps5-sc",
+    // Image: ps5_sc,
     Image:
       "https://www.ennessglobal.com/application/files/3316/2307/5728/6.png",
   },
@@ -324,6 +378,7 @@ export const consoleShowcase = [
     title: "ایکس باکس سری ایکس",
     paragraph: "لذت بازی کردن با بالاترین کیفیت",
     class: "xbox-sc",
-    Image: "https://pngimg.com/uploads/xbox/xbox_PNG101377.png",
+    Image: xbox_sc,
+    ImageAlt: "https://pngimg.com/uploads/xbox/xbox_PNG101377.png",
   },
 ];

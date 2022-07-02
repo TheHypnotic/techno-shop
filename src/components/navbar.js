@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from "react-router-dom";
 import {
   faMagnifyingGlass,
   faCartShopping,
@@ -18,7 +19,7 @@ const Navbar = () => {
   const [mobileBrands, setMobileBrands] = useState([]);
   const [laptopBrands, seLaptopBrands] = useState([]);
   const [tabletBrands, setTabletBrands] = useState([]);
-
+  const navigate = useNavigate();
   useEffect(() => {
     const brandList = [];
     products.map((item) => {
@@ -158,7 +159,7 @@ const Navbar = () => {
       <section id="navbar">
         <div className="container">
           <div className="navbar-top flex justify-between align-center">
-            <div className="brand-name flex">
+            <div className="brand-name flex" onClick={() => navigate("/")}>
               <div className="d-none menu-bars">
                 <FontAwesomeIcon icon={faBars} />
               </div>
@@ -186,7 +187,9 @@ const Navbar = () => {
         <div className="navbar-menu ">
           <ul className="flex container">
             <li className="nav-item flex">
-              <a href="#">خانه</a>
+              <a href="#" onClick={() => navigate("/")}>
+                خانه
+              </a>
               <div className="d-none menu-cross ">
                 <FontAwesomeIcon icon={faXmark} />
               </div>

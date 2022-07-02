@@ -97,7 +97,7 @@ const Homepage = () => {
               <div className="carousel-text">
                 <h2>{item.h2}</h2>
                 <p>{item.detail}</p>
-                <button className="btn"> بیشتر &gt;</button>
+                {/* <button className="btn"> بیشتر &gt;</button> */}
               </div>
               <img src={item.img} alt="" />
             </div>
@@ -120,17 +120,17 @@ const Homepage = () => {
             return (
               <div key={item.id}>
                 <div className="card">
-                  <img src={item.img} alt="" />
-                  <h2>{item.name}</h2>
-                  <p className={`${item.price2 ? "discounted-price" : ""}`}>
-                    {item.price2}
-                  </p>
-                  <p className={`${item.price2 ? "discounted" : ""}`}>
-                    {item.price}
-                  </p>
-
                   <Link to={`/products/${item.id}`}>
-                    <button className="btn"> بیشتر &gt;</button>
+                    <img src={item.img} alt="" />
+                    <h2>{item.name}</h2>
+                    <div className="price">
+                      <p className={`${item.price2 ? "discounted-price" : ""}`}>
+                        {item.price2}
+                      </p>
+                      <p className={`${item.price2 ? "discounted" : ""}`}>
+                        {item.price}
+                      </p>
+                    </div>
                   </Link>
                 </div>
               </div>
@@ -156,7 +156,9 @@ const Homepage = () => {
                       دقیقه : {countDown.getSeconds()} ثانیه
                     </h3>
                   </div>
-                  <button className="btn"> بیشتر &gt;</button>
+                  <Link to={`/products/${item.id}`}>
+                    <button className="btn"> بیشتر &gt;</button>
+                  </Link>
                 </div>
               </div>
             );
@@ -172,16 +174,15 @@ const Homepage = () => {
               if (item.category === "phone") {
                 return (
                   <div key={item.id} className="card">
-                    <img src={item.img} alt="" />
-                    <h2>{item.name}</h2>
-                    <p className={`${item.price2 ? "discounted-price" : ""}`}>
-                      {item.price2}
-                    </p>
-                    <p className={`${item.price2 ? "discounted" : ""}`}>
-                      {item.price}
-                    </p>
                     <Link to={`/products/${item.id}`}>
-                      <button className="btn"> بیشتر &gt;</button>
+                      <img src={item.img} alt="" />
+                      <h2>{item.name}</h2>
+                      <p className={`${item.price2 ? "discounted-price" : ""}`}>
+                        {item.price2}
+                      </p>
+                      <p className={`${item.price2 ? "discounted" : ""}`}>
+                        {item.price}
+                      </p>
                     </Link>
                   </div>
                 );
@@ -219,16 +220,15 @@ const Homepage = () => {
               if (item.category === "laptop") {
                 return (
                   <div key={item.id} className="card">
-                    <img src={item.img} alt="" />
-                    <h2>{item.name}</h2>
-                    <p className={`${item.price2 ? "discounted-price" : ""}`}>
-                      {item.price2}
-                    </p>
-                    <p className={`${item.price2 ? "discounted" : ""}`}>
-                      {item.price}
-                    </p>
                     <Link to={`/products/${item.id}`}>
-                      <button className="btn"> بیشتر &gt;</button>
+                      <img src={item.img} alt="" />
+                      <h2>{item.name}</h2>
+                      <p className={`${item.price2 ? "discounted-price" : ""}`}>
+                        {item.price2}
+                      </p>
+                      <p className={`${item.price2 ? "discounted" : ""}`}>
+                        {item.price}
+                      </p>
                     </Link>
                   </div>
                 );

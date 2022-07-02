@@ -135,13 +135,13 @@ const Footer = () => {
             <div className="phone-number">
               <div className="flex">
                 <FaPhoneAlt />
-                <a href="tel:021-66112233">021-66112233</a>
+                <a href="tel:021-66112233">۶۶۱۱۱۰۰۰</a>
               </div>
               <p>شنبه تا چهارشنبه ۸:۳۰ الی ۲۱ - پنجشنبه ۹ الی ۲۰</p>
             </div>
             <div className="flex email-address">
               <FontAwesomeIcon icon={faEnvelope} />
-              <a href="mailto:info@mail.com">info@mail.com</a>
+              <a href="mailto:info@mail.com">techno-contact@mail.com</a>
             </div>
           </div>
         </div>
