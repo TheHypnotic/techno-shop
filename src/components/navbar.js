@@ -12,14 +12,20 @@ import {
   faBars,
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
-import { faSquare } from "@fortawesome/free-regular-svg-icons";
 import { products } from "../static/products";
+import SignIn from "./navbar/signIn";
+import ShoppingCart from "./navbar/shoppingCart";
+import { useSelector } from "react-redux";
 
 const Navbar = () => {
   const [mobileBrands, setMobileBrands] = useState([]);
   const [laptopBrands, seLaptopBrands] = useState([]);
   const [tabletBrands, setTabletBrands] = useState([]);
   const navigate = useNavigate();
+
+  const numberCart = useSelector((state) => state.cart.numberCart);
+  const somethingInCart = numberCart > 0;
+
   useEffect(() => {
     const brandList = [];
     products.map((item) => {
@@ -73,88 +79,11 @@ const Navbar = () => {
       menu.classList.remove("d-block");
     });
   }, []);
-  useEffect(() => {
-    const isActive = document.querySelector(".signin-heading");
-    if (isActive.classList.contains("active")) {
-      document.querySelector("#signin-form").classList.add("d-block");
-    }
-    document
-      .querySelector(".account-sign-btn")
-      .addEventListener("click", () => {
-        document.querySelector("#signin").classList.add("d-block");
-      });
-    document.querySelector(".cross").addEventListener("click", () => {
-      document.querySelector("#signin").classList.remove("d-block");
-    });
 
-    document.querySelector(".signup-heading").addEventListener("click", () => {
-      document.querySelector("#signup-form").classList.add("d-block");
-      document.querySelector(".signup-heading").classList.add("active");
-      document.querySelector("#signin-form").classList.remove("d-block");
-      document.querySelector(".signin-heading").classList.remove("active");
-    });
-    document.querySelector(".signin-heading").addEventListener("click", () => {
-      document.querySelector("#signin-form").classList.add("d-block");
-      document.querySelector(".signin-heading").classList.add("active");
-      document.querySelector("#signup-form").classList.remove("d-block");
-      document.querySelector(".signup-heading").classList.remove("active");
-    });
-  }, []);
   return (
     <>
-      <section id="signin" className="d-none">
-        <div id="signin-container">
-          <div className=" cross ">
-            <FontAwesomeIcon icon={faXmark} />
-          </div>
-          <div className="signin-tab flex">
-            <h3 className="signin-heading active">ورود</h3>
-            <h3 className="signup-heading">ثبت نام</h3>
-          </div>
-          <form id="signin-form" className=" d-none">
-            <div className="input-container flex">
-              <label htmlFor="">شماره همراه:</label>
-              <input type="number" name="Phone" required />
-            </div>
-            <div className="input-container flex">
-              <label htmlFor="">رمز:</label>
-              <input type="password" name="Password" required />
-            </div>
-            <div>
-              <input type="checkbox" />
-              <label htmlFor=""> مرا به خاطر بسپار</label>
-            </div>
-            <div className="form-btn">
-              <button className="btn">ورود</button>
-            </div>
-          </form>
-          <form id="signup-form" className=" d-none">
-            <div className="input-container flex">
-              <label htmlFor="">نام:</label>
-              <input type="text" name="Phone" required />
-            </div>
-            <div className="input-container flex">
-              <label htmlFor="">شماره همراه:</label>
-              <input type="number" name="Phone" required />
-            </div>
-            <div className="input-container flex">
-              <label htmlFor="">رمز:</label>
-              <input type="password" name="Password" required />
-            </div>
-            <div className="input-container flex">
-              <label htmlFor="">تکرار رمز:</label>
-              <input type="password" name="Password" required />
-            </div>
-            <div>
-              <input type="checkbox" />
-              <label htmlFor="">قوانین را بطور کامل قبول دارم</label>
-            </div>
-            <div className="form-btn">
-              <button className="btn">ثبت نام</button>
-            </div>
-          </form>
-        </div>
-      </section>
+      <SignIn />
+      <ShoppingCart />
 
       <section id="navbar">
         <div className="container">
@@ -176,8 +105,10 @@ const Navbar = () => {
                 </div>
                 <div className="flex align-center cart-acc-container">
                   <button className="account-sign-btn">ورود / ثبت نام</button>
-                  <div></div>
-                  <FontAwesomeIcon icon={faCartShopping} />
+                  <div className="number-cart">
+                    {somethingInCart && numberCart}
+                  </div>
+                  <FontAwesomeIcon id="cartIcon" icon={faCartShopping} />
                 </div>
               </div>
             </div>

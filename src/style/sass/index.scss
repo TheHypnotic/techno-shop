@@ -33,10 +33,10 @@ ul {
 }
 // utilities
 .d-none {
-  display: none;
+  display: none !important;
 }
 .d-block {
-  display: block;
+  display: block !important;
 }
 .color-light {
   color: $lighter-bg;
@@ -199,10 +199,28 @@ li {
   margin-right: 5px;
   padding-right: 20px;
   height: 23px;
+}
+
+.cart-acc-container .fa-cart-shopping {
+  margin-right: 5px;
+  padding-right: 20px;
+  height: 23px;
   color: #313131;
   border-right: 0.5px solid #000;
   :hover {
     cursor: pointer;
+  }
+}
+.cart-acc-container {
+  position: relative;
+  .number-cart {
+    background-color: $red;
+    color: #fff;
+    border-radius: 20%;
+    font-size: 0.8rem;
+    position: absolute;
+    left: 19px;
+    bottom: -2px;
   }
 }
 .navbar-menu {
@@ -453,6 +471,30 @@ li {
     font-size: 1.2rem;
   }
 }
+
+#technologies {
+  text-align: center;
+  h1 {
+    text-align: center;
+  }
+  h2 {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  p {
+    margin: 0;
+  }
+  .flex .flex {
+    flex-direction: column;
+    padding: 0 10px;
+  }
+  .logo {
+    height: 50px;
+    font-size: 6rem;
+    color: $brand-secondary-color;
+  }
+}
 #footer {
   padding-top: 40px;
   .container {
@@ -627,6 +669,96 @@ li {
     }
   }
 }
+
+#shopping-cart {
+  // height: 100vh;
+  // width: 98vw;
+  // position: fixed;
+  // z-index: 300;
+  // background-color: #6868682a;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+
+  #shopping-cart-container {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 10%;
+    max-width: 80vw;
+    background: #fff;
+    padding: 50px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 3px 5px #9b9b9b;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow-x: scroll;
+  }
+
+  .cartCross {
+    color: $light-color;
+    position: absolute;
+    vertical-align: middle;
+    left: 46px;
+    top: 25px;
+
+    &:hover {
+      cursor: pointer;
+    }
+    svg {
+      font-size: 2rem;
+      color: $brand-secondary-color;
+    }
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table th,
+  table td {
+    padding: 10px;
+    text-align: right;
+    border-bottom: 1px solid #ddd;
+  }
+
+  table th {
+    background-color: #f4f4f4;
+  }
+
+  .cart-item img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+  }
+
+  .cart-item button {
+    margin: 0 5px;
+  }
+  .btn {
+    padding: 5px 10px;
+    margin: 0 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .btn:hover {
+    background-color: #0056b3;
+  }
+}
 // single product
 #single-product {
   margin: 30px 0;
@@ -679,6 +811,12 @@ li {
     text-align: center;
   }
 
+  .add-to-cart {
+    margin-bottom: 10px;
+  }
+  .remove-from-cart {
+    background-color: $red;
+  }
   .gb-btn-container {
     position: relative;
     .gb-btn {
@@ -837,6 +975,8 @@ li {
       margin-right: 8.5rem;
     }
   }
+
+  #technologies .flex,
   #footer .container.flex {
     flex-direction: column-reverse;
   }
@@ -868,10 +1008,16 @@ li {
       text-align: center;
     }
   }
+  #shopping-cart .btn {
+    margin-bottom: 10px;
+  }
 }
 @media (max-width: 800px) {
   .container {
     max-width: 600px;
+    body {
+      display: none;
+    }
   }
   .search-holder .line {
     right: 7.5%;
@@ -883,6 +1029,12 @@ li {
     max-width: 400px;
   }
   #navbar {
+    // .navbar-menu ul.container {
+    //   width: 100vw;
+    //   li.nav-item {
+    //     align-self: center;
+    //   }
+    // }
     .search-holder {
       .line {
         right: 8.5%;
@@ -900,11 +1052,16 @@ li {
       margin-left: 20px;
       .account-sign-btn {
         margin: 0;
+        margin-top: 5px;
+      }
+      .number-cart {
+        left: 62px;
+        bottom: -7px;
       }
       svg {
         padding: 0;
         margin: 0;
-        margin-top: 5px;
+        margin-top: 13px;
       }
     }
   }
@@ -945,6 +1102,20 @@ li {
       height: 300px;
     }
   }
+  .shopping-cart-container {
+    width: 80%;
+  }
+
+  .cartlist table,
+  .cartlist th,
+  .cartlist td {
+    font-size: 14px;
+  }
+  .cartlist {
+    overflow-x: auto;
+  }
+}
+@media (max-width: 480px) {
 }
 @media (max-width: 350px) {
   .container {
