@@ -1,7 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const TopSales = ({ products }) => {
+export interface Product {
+  id: number;
+  name: string;
+  img: string;
+  price: string;
+  price2?: string;
+}
+export interface TopSalesProps {
+  products: Product[];
+}
+
+const TopSales = ({ products }: TopSalesProps) => {
   return (
     <section id="top-sales">
       <h2 className="container">پرفروش ترین ها</h2>

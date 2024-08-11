@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { TopSalesProps } from "./TopSales";
 
-const SpecialOffer = ({ products }) => {
-  const [countDown, setCountDown] = useState(new Date());
-  const [date, setDate] = useState(new Date());
+const SpecialOffer = ({ products }: TopSalesProps) => {
+  const [countDown, setCountDown] = useState<Date>(new Date());
+  const [date, setDate] = useState<Date>(new Date());
 
   useEffect(() => {
     setTimeout(() => {
@@ -19,7 +20,9 @@ const SpecialOffer = ({ products }) => {
   }, [countDown]);
 
   const specialOfferItem = products.find((item) => item.id === 1);
-
+  if (!specialOfferItem) {
+    return <div>No special offer available</div>;
+  }
   return (
     <section id="special-offer">
       <div key={specialOfferItem.id} className="container flex">

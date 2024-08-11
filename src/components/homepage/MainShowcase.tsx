@@ -2,7 +2,16 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-const MainShowcase = ({ showcaseList }) => {
+interface ShowcaseItem {
+  h2: string;
+  detail: string;
+  img: string;
+}
+interface MainShowcaseProps {
+  showcaseList: ShowcaseItem[];
+}
+
+const MainShowcase = ({ showcaseList }: MainShowcaseProps) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextItem = () =>
