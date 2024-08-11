@@ -17,21 +17,35 @@ import SignIn from "./navbar/signIn";
 import ShoppingCart from "./navbar/shoppingCart";
 import { useSelector } from "react-redux";
 
+interface Product {
+  id: number;
+  name: string;
+  detail: string;
+  category: string;
+  brand: string;
+  sales: number;
+  price: string;
+  price2?: string;
+  img: string;
+  BigImg: string;
+  brandFa?: string;
+}
+
 const Navbar = () => {
-  const [mobileBrands, setMobileBrands] = useState([]);
-  const [laptopBrands, seLaptopBrands] = useState([]);
-  const [tabletBrands, setTabletBrands] = useState([]);
+  const [mobileBrands, setMobileBrands] = useState<string[]>([]);
+  const [laptopBrands, seLaptopBrands] = useState<string[]>([]);
+  const [tabletBrands, setTabletBrands] = useState<string[]>([]);
   const navigate = useNavigate();
 
-  const numberCart = useSelector((state) => state.cart.numberCart);
-  const somethingInCart = numberCart > 0;
+  const numberCart: number = useSelector((state: any) => state.cart.numberCart);
+  const somethingInCart: boolean = numberCart > 0;
 
   useEffect(() => {
-    const brandList = [];
-    products.map((item) => {
+    const brandList: string[] = [];
+    products.map((item: Product) => {
       const { brandFa, category } = item;
 
-      if (category === "phone") {
+      if (category === "phone" && brandFa) {
         if (!brandList.includes(brandFa)) {
           return brandList.push(brandFa);
         }
@@ -40,11 +54,11 @@ const Navbar = () => {
     setMobileBrands(brandList);
   }, []);
   useEffect(() => {
-    const brandList = [];
-    products.map((item) => {
+    const brandList: string[] = [];
+    products.map((item: Product) => {
       const { brandFa, category } = item;
 
-      if (category === "laptop") {
+      if (category === "laptop" && brandFa) {
         if (!brandList.includes(brandFa)) {
           return brandList.push(brandFa);
         }
@@ -53,11 +67,11 @@ const Navbar = () => {
     seLaptopBrands(brandList);
   }, []);
   useEffect(() => {
-    const brandList = [];
-    products.map((item) => {
+    const brandList: string[] = [];
+    products.map((item: Product) => {
       const { brandFa, category } = item;
 
-      if (category === "tablet") {
+      if (category === "tablet" && brandFa) {
         if (!brandList.includes(brandFa)) {
           return brandList.push(brandFa);
         }
@@ -66,15 +80,15 @@ const Navbar = () => {
     setTabletBrands(brandList);
   }, []);
   useEffect(() => {
-    document.querySelector(".menu-bars").addEventListener("click", () => {
-      const menu = document.querySelector(".navbar-menu");
+    document.querySelector(".menu-bars")!.addEventListener("click", () => {
+      const menu = document.querySelector(".navbar-menu") as HTMLElement;
       menu.style.display = "block";
       menu.classList.add("d-block");
     });
   }, []);
   useEffect(() => {
-    document.querySelector(".menu-cross").addEventListener("click", () => {
-      const menu = document.querySelector(".navbar-menu");
+    document.querySelector(".menu-cross")!.addEventListener("click", () => {
+      const menu = document.querySelector(".navbar-menu") as HTMLElement;
       menu.style.display = "none";
       menu.classList.remove("d-block");
     });

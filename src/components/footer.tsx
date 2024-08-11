@@ -2,6 +2,8 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import reduxLogo from "../static/redux-logo.svg";
+// import { ReactComponent as ReduxLogo } from "../static/redux-logo.svg";
+
 import {
   FaInstagram,
   FaLinkedin,
@@ -31,6 +33,7 @@ const Footer = () => {
           <div className="flex">
             {/* <FontAwesomeIcon icon={faRedux} /> */}
             <img className="logo" src={reduxLogo} alt="" />
+            {/* <ReduxLogo className="logo" alt="redux logo" /> */}
             <h2>Redux</h2>
             <p>
               Redux efficiently manages the application state, ensuring
