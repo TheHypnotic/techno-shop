@@ -17,7 +17,7 @@ import SignIn from "./navbar/signIn";
 import ShoppingCart from "./navbar/shoppingCart";
 import { useSelector } from "react-redux";
 
-interface Product {
+export interface Product {
   id: number;
   name: string;
   detail: string;
