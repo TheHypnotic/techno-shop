@@ -4,15 +4,32 @@ import React, { useEffect } from "react";
 import ShoppingCartItem from "./shoppingCartItem";
 import { useDispatch, useSelector } from "react-redux";
 import { actions } from "../../redux/cart";
+
+export interface CartItem {
+  id: number;
+  name: string;
+  price: number;
+  quantity: number;
+  image: string;
+  img: string;
+  title: string;
+  amount: number;
+}
+
+interface RootState {
+  cart: {
+    cartlist: CartItem[];
+  };
+}
 const ShoppingCart = () => {
   const dispatch = useDispatch();
-  const cartList = useSelector((state) => state.cart.cartlist);
+  const cartList = useSelector((state: RootState) => state.cart.cartlist);
 
-  const addItem = (id) => {
-    dispatch(actions.addItem(id));
+  const addItem = (item: CartItem) => {
+    dispatch(actions.addItem(item));
   };
-  const removeItem = (id) => {
-    dispatch(actions.removeItem(id));
+  const removeItem = (item: CartItem) => {
+    dispatch(actions.removeItem(item));
   };
 
   useEffect(() => {
@@ -21,18 +38,18 @@ const ShoppingCart = () => {
     const crossIcon = document.querySelector(".cartCross");
 
     const showCart = () => {
-      shoppingCartElement.classList.add("d-block");
+      if (shoppingCartElement) shoppingCartElement.classList.add("d-block");
     };
 
     const hideCart = () => {
-      shoppingCartElement.classList.remove("d-block");
+      if (shoppingCartElement) shoppingCartElement.classList.remove("d-block");
     };
-    cartIcon.addEventListener("click", showCart);
-    crossIcon.addEventListener("click", hideCart);
+    cartIcon?.addEventListener("click", showCart);
+    crossIcon?.addEventListener("click", hideCart);
 
     return () => {
-      cartIcon.removeEventListener("click", showCart);
-      crossIcon.removeEventListener("click", hideCart);
+      cartIcon?.removeEventListener("click", showCart);
+      crossIcon?.removeEventListener("click", hideCart);
     };
   }, []);
 

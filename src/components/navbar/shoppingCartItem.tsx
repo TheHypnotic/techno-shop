@@ -1,6 +1,12 @@
 import React from "react";
+import { CartItem } from "./shoppingCart";
 
-const ShoppingCartItem = ({ item, onAdd, onRemove }) => {
+interface ShoppingCartItemProp {
+  item: CartItem;
+  onAdd: (id: CartItem) => void;
+  onRemove: (id: CartItem) => void;
+}
+const ShoppingCartItem = ({ item, onAdd, onRemove }: ShoppingCartItemProp) => {
   return (
     <tr>
       <td className="cart-item">
@@ -10,7 +16,6 @@ const ShoppingCartItem = ({ item, onAdd, onRemove }) => {
       <td>{item.amount}</td>
       <td>${item.price}</td>
       <td>${item.price}</td>
-      {/* <td>${(item.amount * item.singlePrice).toFixed(2)}</td> */}
       <td>
         <button className="btn" onClick={() => onAdd(item)}>
           +
