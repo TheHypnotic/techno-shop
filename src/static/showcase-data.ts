@@ -1,7 +1,13 @@
 import iphoneimg from "./iphone.png";
 import macimg from "./mac.png";
 import ps5img from "./ps5.jpg";
-export const showcaseList = [
+
+interface ShowCase {
+  h2: string;
+  detail: string;
+  img: string;
+}
+export const showcaseList: ShowCase[] = [
   {
     h2: "جدیدترین محصولات اپل",
     detail: "خرید جدید ترین محصولات اپل با گارانتی",

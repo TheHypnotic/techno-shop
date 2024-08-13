@@ -1,10 +1,17 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import { configureStore, createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { CartItem } from "../components/navbar/shoppingCart";
+
+interface CartState {
+  cartlist: CartItem[];
+  numberCart: number;
+}
+const initialState: CartState = { cartlist: [], numberCart: 0 };
 
 const cartSlice = createSlice({
   name: "cart",
-  initialState: { cartlist: [], numberCart: 0 },
+  initialState,
   reducers: {
-    addItem(state, action) {
+    addItem(state, action: PayloadAction<CartItem>) {
       const existingItem = state.cartlist.find(
         (item) => item.id === action.payload.id
       );
@@ -16,23 +23,24 @@ const cartSlice = createSlice({
       }
       state.numberCart += 1;
     },
-    removeItem(state, action) {
+    removeItem(state, action: PayloadAction<{ id: number }>) {
       const existingItem = state.cartlist.find(
         (item) => item.id === action.payload.id
       );
-
-      if (existingItem.amount === 1) {
-        state.cartlist = state.cartlist.filter(
-          (item) => item.id !== action.payload.id
-        );
-      }
       if (existingItem) {
-        existingItem.amount -= 1;
-      }
+        if (existingItem.amount === 1) {
+          state.cartlist = state.cartlist.filter(
+            (item) => item.id !== action.payload.id
+          );
+        }
+        if (existingItem) {
+          existingItem.amount -= 1;
+        }
 
-      state.numberCart -= 1;
+        state.numberCart -= 1;
+      }
     },
-    removeItemCompletely(state, action) {
+    removeItemCompletely(state, action: PayloadAction<{ id: number }>) {
       const itemToRemove = state.cartlist.find(
         (item) => item.id === action.payload.id
       );

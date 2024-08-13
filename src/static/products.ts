@@ -1,7 +1,19 @@
 // import ps5_sc from "./ps5-sc.jpg";
 import xbox_sc from "./xbox-sc.png";
-
-export const products = [
+interface Product {
+  id: number;
+  name: string;
+  detail: string;
+  category: string;
+  brand: string;
+  brandFa?: string;
+  sales: number;
+  price: string;
+  price2?: string;
+  img: string;
+  BigImg: string;
+}
+export const products: Product[] = [
   {
     id: 1,
     name: "گوشی موبایل شیائومی مدل Redmi Note 11",
