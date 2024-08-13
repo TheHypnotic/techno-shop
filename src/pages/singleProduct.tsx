@@ -3,15 +3,25 @@ import { useNavigate, useParams } from "react-router-dom";
 import { products } from "../static/products";
 import { actions } from "../redux/cart";
 import { useSelector, useDispatch } from "react-redux";
+import { CartItem, RootState } from "../components/navbar/shoppingCart";
+
+// interface RootState {
+//   cart: {
+//     cartlist: CartItem[];
+//   };
+// }
 
 const SingleProduct = () => {
-  const { productId } = useParams();
+  const { productId } = useParams<{ productId: string }>();
   const navigate = useNavigate();
 
   const dispatch = useDispatch();
-  const cartList = useSelector((state) => state.cart.cartlist);
-
-  const isInCart = cartList.some((item) => item.id == productId);
+  const cartList = useSelector((state: RootState) => state.cart.cartlist);
+  const numericProductId = Number(productId);
+  if (isNaN(numericProductId)) {
+    return <p>Invalid product ID.</p>;
+  }
+  const isInCart = cartList.some((item) => item.id == numericProductId);
 
   const addItem = (item) => {
     dispatch(actions.addItem(item));
@@ -23,7 +33,7 @@ const SingleProduct = () => {
   return (
     <>
       {products.map((item, index) => {
-        if (item.id == productId) {
+        if (item.id == numericProductId) {
           return (
             <section key={index} id="single-product">
               <div className="container gb-btn-container">

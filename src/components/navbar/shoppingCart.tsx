@@ -16,7 +16,7 @@ export interface CartItem {
   amount: number;
 }
 
-interface RootState {
+export interface RootState {
   cart: {
     cartlist: CartItem[];
   };
