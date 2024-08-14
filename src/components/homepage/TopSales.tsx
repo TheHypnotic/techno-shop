@@ -1,13 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Product } from "../../types/types";
 
-export interface Product {
-  id: number;
-  name: string;
-  img: string;
-  price: string;
-  price2?: string;
-}
 export interface TopSalesProps {
   products: Product[];
 }

@@ -3,13 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { products } from "../static/products";
 import { actions } from "../redux/cart";
 import { useSelector, useDispatch } from "react-redux";
-import { CartItem, RootState } from "../components/navbar/shoppingCart";
-
-// interface RootState {
-//   cart: {
-//     cartlist: CartItem[];
-//   };
-// }
+import { CartItem, RootState } from "../types/types";
 
 const SingleProduct = () => {
   const { productId } = useParams<{ productId: string }>();

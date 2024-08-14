@@ -2,7 +2,6 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import reduxLogo from "../static/redux-logo.svg";
-// import { ReactComponent as ReduxLogo } from "../static/redux-logo.svg";
 
 import {
   FaInstagram,

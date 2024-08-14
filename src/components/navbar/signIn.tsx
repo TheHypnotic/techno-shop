@@ -29,33 +29,6 @@ const SignIn = () => {
     };
   }, []);
 
-  // useEffect(() => {
-  //   const isActive = document.querySelector(".signin-heading");
-  //   if (isActive.classList.contains("active")) {
-  //     document.querySelector("#signin-form").classList.add("d-block");
-  //   }
-  //   document
-  //     .querySelector(".account-sign-btn")
-  //     .addEventListener("click", () => {
-  //       document.querySelector("#signin").classList.add("d-block");
-  //     });
-  //   document.querySelector(".cross").addEventListener("click", () => {
-  //     document.querySelector("#signin").classList.remove("d-block");
-  //   });
-
-  //   document.querySelector(".signup-heading").addEventListener("click", () => {
-  //     document.querySelector("#signup-form").classList.add("d-block");
-  //     document.querySelector(".signup-heading").classList.add("active");
-  //     document.querySelector("#signin-form").classList.remove("d-block");
-  //     document.querySelector(".signin-heading").classList.remove("active");
-  //   });
-  //   document.querySelector(".signin-heading").addEventListener("click", () => {
-  //     document.querySelector("#signin-form").classList.add("d-block");
-  //     document.querySelector(".signin-heading").classList.add("active");
-  //     document.querySelector("#signup-form").classList.remove("d-block");
-  //     document.querySelector(".signup-heading").classList.remove("active");
-  //   });
-  // }, []);
   return (
     <section
       id="signin"

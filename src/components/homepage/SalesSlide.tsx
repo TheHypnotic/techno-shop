@@ -1,29 +1,9 @@
 import React from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-import { Product } from "../navbar";
-interface SliderSettings {
-  dots: boolean;
-  infinite: boolean;
-  speed?: number;
-  slidesToShow: number;
-  slidesToScroll: number;
-  autoplay?: boolean;
-  autoplaySpeed?: number;
-  pauseOnHover?: boolean;
-  arrows?: boolean;
-  rtl?: boolean;
-  responsive?: Array<{
-    breakpoint: number;
-    settings: {
-      slidesToShow: number;
-      slidesToScroll: number;
-      infinite?: boolean;
-      dots?: boolean;
-      initialSlide?: number;
-    };
-  }>;
-}
+import { Product } from "../../types/types";
+import { SliderSettings } from "../../types/types";
+
 interface SalesSlideProps {
   tag: string;
   title: string;

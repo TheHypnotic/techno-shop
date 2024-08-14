@@ -5,6 +5,8 @@ import NotExist from "./pages/notExist";
 import { Route, Routes } from "react-router-dom";
 import SingleProduct from "./pages/singleProduct";
 import ScrollToTop from "./components/ScrollToTop";
+import React from "react";
+
 function App() {
   return (
     <>

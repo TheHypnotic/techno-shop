@@ -16,20 +16,7 @@ import { products } from "../static/products";
 import SignIn from "./navbar/signIn";
 import ShoppingCart from "./navbar/shoppingCart";
 import { useSelector } from "react-redux";
-
-export interface Product {
-  id: number;
-  name: string;
-  detail: string;
-  category: string;
-  brand: string;
-  sales: number;
-  price: string;
-  price2?: string;
-  img: string;
-  BigImg: string;
-  brandFa?: string;
-}
+import { Product } from "../types/types";
 
 const Navbar = () => {
   const [mobileBrands, setMobileBrands] = useState<string[]>([]);

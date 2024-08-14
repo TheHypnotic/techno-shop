@@ -4,23 +4,8 @@ import React, { useEffect } from "react";
 import ShoppingCartItem from "./shoppingCartItem";
 import { useDispatch, useSelector } from "react-redux";
 import { actions } from "../../redux/cart";
+import { RootState, CartItem } from "../../types/types";
 
-export interface CartItem {
-  id: number;
-  name: string;
-  price: number;
-  quantity: number;
-  image: string;
-  img: string;
-  title: string;
-  amount: number;
-}
-
-export interface RootState {
-  cart: {
-    cartlist: CartItem[];
-  };
-}
 const ShoppingCart = () => {
   const dispatch = useDispatch();
   const cartList = useSelector((state: RootState) => state.cart.cartlist);
